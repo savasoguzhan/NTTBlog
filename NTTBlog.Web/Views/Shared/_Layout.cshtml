@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NTTBlog.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NTTBlog.Web.styles.css" asp-append-version="true" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/navbar/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/navbar/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/navbar/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/navbar/css/style.css">
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/LayoutBlog/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/LayoutBlog/assets/css/templatemo-stand-blog.css">
+    <link rel="stylesheet" href="~/LayoutBlog/assets/css/owl.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    @* <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">  <img src="~/logo/NTTBlog.png" style="height:9em " /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">
+                                Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog Entries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="post-details.html">Post Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> *@
+    <!-- Header2  -->
+    
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">info@NTTBLOG.com</span></a>
+                    <span class="mx-md-2 d-inline-block"></span>
+                    <a href="#" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">1+ (111) 111 1111</span></a>
+
+
+                    <div class="float-right">
+
+                        <a href="#" class=""><span class="mr-2  icon-twitter"></span> <span class="d-none d-md-inline-block">Twitter</span></a>
+                        <span class="mx-md-2 d-inline-block"></span>
+                        <a href="#" class=""><span class="mr-2  icon-facebook"></span> <span class="d-none d-md-inline-block">Facebook</span></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+            <div class="row align-items-center position-relative">
+
+
+                <div class="site-logo">
+                    <a asp-controller="Home" asp-action="index" class="text-black"><span class="text-primary">NTTBlog</a>
+                </div>
+
+                <div class="col-12">
+                    <nav class="site-navigation text-right ml-auto " role="navigation">
+
+                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                            
+
+
+                           
+
+                            
+
+                            
+                            <li><a asp-area="Admin" asp-controller="Auth" asp-action="Login" class="nav-link">Blog Entries</a></li>
+                            <li><a asp-controller="Home" asp-action="Contact" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="main-banner header-text">
+        <div class="container-fluid">
+            
+        </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+    
+    @RenderBody()
+
+    
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="social-icons">
+                        <li><a href="http://www.facebook.com">Facebook </a></li>
+                        <li><a href="http://www.x.com">X</a></li>
+                        
+                        <li><a href="http://www.Linkedin.com">Linkedin</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="copyright-text">
+                        <p>
+                            Copyright 2024 NTTBlog
+
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/LayoutBlog/vendor/jquery/jquery.min.js"></script>
+    <script src="~/LayoutBlog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="~/LayoutBlog/assets/js/custom.js"></script>
+    <script src="~/LayoutBlog/assets/js/owl.js"></script>
+    <script src="~/LayoutBlog/assets/js/slick.js"></script>
+    <script src="~/LayoutBlog/assets/js/isotope.js"></script>
+    <script src="~/LayoutBlog/assets/js/accordions.js"></script>
+
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+    
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+    <script src="`~/navbar/js/jquery-3.3.1.min.js"></script>
+    <script src="~/navbar/js/popper.min.js"></script>
+    <script src="~/navbar/js/bootstrap.min.js"></script>
+    <script src="~/navbar/js/jquery.sticky.js"></script>
+    <script src="~/navbar/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

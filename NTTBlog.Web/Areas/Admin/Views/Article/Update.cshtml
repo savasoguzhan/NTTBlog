@@ -1,0 +1,68 @@
+﻿@using NTTBlog.Entity.VM.Articles
+@model ArticleUpdateVM
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light">Article / Update Article </span>
+    </h4>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <form asp-area="Admin" asp-controller="Article" asp-action="Update" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <input  type="hidden" asp-for="Id"/>
+                        <div class="form-group">
+                            <label asp-for="CategoryId">Category</label>
+                            <select id="categoryList" class="form-control" asp-for="CategoryId" asp-items="@(new SelectList(Model.Categories,"Id","Name"))">
+                                <span asp-validation-for="CategoryId" class="text-danger"></span>
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Title" for="defaultFormControlInput" class="form-label">Title</label>
+                            <input asp-for="Title" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Title" aria-describedby="defaultFormControlHelp">
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Tags" for="defaultFormControlInput" class="form-label">Tags</label>
+                            <input asp-for="Tags" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Tags" aria-describedby="defaultFormControlHelp">
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Content" for="defaultFormControlInput" class="form-label">Content</label>
+                            <textarea asp-for="Content" type="text" class="form-control mb-3" id="defaultFormControlInput" style="min-height:350px;" placeholder="Content" aria-describedby="defaultFormControlHelp"></textarea>
+
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Photo" for="defaultFormControlInput" class="form-label">Chose Picture </label>
+                            <input asp-for="Photo" type="file" class="form-control mb-3" id="defaultFormControlInput" aria-describedby="defaultFormControlHelp">
+                            <span asp-validation-for="Photo"></span>
+
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Image.Url" for="defaultFormControlInput" class="form-label d-block">Picture </label>
+                            <img style="height:25em; width:25em" src="~/images/@Model.Image.Url" alt="@Model.Title" />
+
+
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block " type="submit">SAVE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+

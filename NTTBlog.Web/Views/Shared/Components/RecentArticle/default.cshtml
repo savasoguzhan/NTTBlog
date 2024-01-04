@@ -1,0 +1,20 @@
+﻿@using NTTBlog.Entity.VM.Articles
+@model List<ArticleVM>
+
+
+<div class="content">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a>
+                    <h5>@item.Title</h5>
+                    <span>@item.CreateDate.ToString("dd/MM/yy")</span>
+                </a>
+            </li>
+
+        }
+
+
+    </ul>
+</div>

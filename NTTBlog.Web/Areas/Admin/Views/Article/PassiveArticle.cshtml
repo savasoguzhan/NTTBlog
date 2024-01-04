@@ -1,0 +1,61 @@
+﻿@using NTTBlog.Entity.VM.Articles
+@model List<ArticleVM>
+
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Article Management /</span> Passive Articles</h4>
+
+
+    <div class="card">
+        <h5 class="card-header"> Article</h5>
+        <div class="table-responsive text-nowrap">
+          
+            <table class="table table-bordered table-striped" id="articlesTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Created Date</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Created Date</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Operation</th>
+                    </tr>
+                </tfoot>
+                <tbody class="table-border-bottom-0">
+                    @foreach (var item in Model)
+                    {
+                        <tr name="@item.Id">
+                            <th>@item.Title</th>
+                            <th>@item.Category.Name</th>
+                            <th>@item.CreateDate.ToShortDateString()</th>
+                            <th>@item.CreatedBy</th>
+                            <th>@item.IsPublish</th>
+                            <th>
+                                <a class="btn btn-warning btn-sm" data-id="@item.Id" asp-area="Admin" asp-controller="Article" asp-action="UndoStatus" asp-route-articleId="@item.Id"><i class="bx bx-undo"></i></a>
+                                
+                            </th>
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>
+@section Scripts {
+    <script src="~/js/articleIndex.js" type="application/ecmascript"></script>
+}

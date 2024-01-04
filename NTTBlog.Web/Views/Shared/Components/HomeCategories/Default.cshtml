@@ -1,0 +1,14 @@
+﻿@using NTTBlog.Entity.VM.NewFolder
+@model List<CategoryVM>
+
+<div class="content">
+    <ul>
+
+        @foreach(var item in Model)
+        {
+            <li><a href="/Home/Search?Keyword=@item.Name.ToLower()"> - @item.Name</a></li>
+        }
+        
+        
+    </ul>
+</div>

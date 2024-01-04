@@ -1,0 +1,41 @@
+﻿@using NTTBlog.Entity.VM.Articles
+@model ArticleVM
+<section class="blog-posts">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-8 ">
+                <div class="all-blog-posts">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            
+                            {
+                                <div class="blog-post">
+                                    <div class="blog-thumb">
+                                        <img src="~/LayoutBlog/assets/images/blog-post-01.jpg" alt="">
+                                    </div>
+                                    <div class="down-content">
+
+                                        <a asp-controller="Home" asp-action="Detail"><h4>@Model.Title</h4></a>
+                                        <ul class="post-info">
+                                            
+                                            <
+                                            
+                                        </ul>
+                                        <p>
+                                           @Model.Content
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
